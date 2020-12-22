@@ -50,4 +50,12 @@ function register_acf_block_types(){
 		'keywords'					=> array('acf', 'intro'),
 	));
 
+	acf_register_block_type(array(
+		'name'              => 'about',
+		'title'             => __('About'),
+		'description'       => __('Custom about block.'),
+		'render_template'   => 'template-parts/blocks/section-about.php',
+		'category'          => 'formatting',
+		'keywords'					=> array('acf', 'about'),
+	));
 }

@@ -1,0 +1,82 @@
+@mixin accentColor {
+  background-color: #f88341;
+}
+@mixin  accentTextColor {
+  color: #f88341;
+}
+
+.top-bar-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ag-logo {
+  position: relative;
+
+  &__circle {
+    width: 32px;
+    height: 32px;
+    @include accentColor;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    bottom: 8px;
+  }
+}
+
+.top-bar {
+  padding: 0;
+  background-color: transparent;
+  ul {
+    background-color: transparent;
+  }
+}
+
+.dropdown.menu {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 15px;
+
+  li {
+    a {
+      color: #000;
+      &:hover {
+        transition: .3s ease-in;
+        color: #f88341;
+      }
+    }
+  }
+
+  li.is-active {
+    a {
+      color: #f88341;
+    }
+  }
+}
+
+.ag-header {
+  position: fixed;
+  top: 60px;
+  width: 100%;
+  z-index: 12;
+
+  &__inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+.site-in-touch {
+  &__link {
+    font-family: "Poppins";
+    font-weight: 600;
+    text-decoration: none;
+    padding: 18px 50px;
+    border: 1px solid #d7d7d7;
+    border-radius: 20px;
+    line-height: 55px;
+  }
+}

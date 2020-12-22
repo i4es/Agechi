@@ -36,3 +36,18 @@ if ( ! function_exists( 'foundationpress_gutenberg_support' ) ) :
 
 	add_action( 'after_setup_theme', 'foundationpress_gutenberg_support' );
 endif;
+
+if (function_exists('acf_register_block_type')) {
+	add_action('acf/init', 'register_acf_block_types');
+}
+function register_acf_block_types(){
+	acf_register_block_type(array(
+		'name'              => 'intro',
+		'title'             => __('Intro'),
+		'description'       => __('Custom intro block.'),
+		'render_template'   => 'template-parts/blocks/section-intro.php',
+		'category'          => 'formatting',
+		'keywords'					=> array('acf', 'intro'),
+	));
+
+}

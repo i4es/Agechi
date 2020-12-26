@@ -11,6 +11,7 @@ get_header(); ?>
 				<?php the_content(); ?>
 			<?php endwhile; ?>
 		<?php endif; ?>
+		<?php get_template_part('template-parts/blocks/section', 'jobs') ?>
 	</main>
 
 <?php get_footer();

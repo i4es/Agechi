@@ -68,4 +68,5 @@ function register_acf_block_types(){
 		'category'          => 'formatting',
 		'keywords'					=> array('acf', 'jobs'),
 	));
+
 }

@@ -14,5 +14,5 @@ $(document).foundation();
 $('.ag-jobs-list').slick({
   infinite: true,
   slidesToShow: 3,
-  slidesToScroll: 1
+  slidesToScroll: 1,
 });

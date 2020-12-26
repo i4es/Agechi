@@ -13,31 +13,27 @@ if (!empty($block['align'])) {
 
 <section class="<?php echo esc_attr($className); ?>">
 	<div class="grid-container">
-		<div class="grid-x grid-margin-x">
 			<?php
 			$args = array(
-				'posts_per_page' => 5,
 				'orderby' => 'comment_count',
 				'post_type' => 'jobs'
 			);
 
 			$query = new WP_Query( $args );
 			?>
-
 			<?php if ( $query->have_posts() ) : ?>
-
 			<div class="ag-jobs-list">
-			<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-			<div class="ag-jobs-list__item">
-				<h2><?php the_title(); ?></h2>
+				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+					<div class="ag-jobs-list__item cell small-12 medium-4 large-4">
+						<?php the_post_thumbnail();?>
+						<h4><?php the_title(); ?></h4>
+					</div>
+				<?php endwhile; ?>
+				<?php wp_reset_postdata(); ?>
 			</div>
-			<?php endwhile; ?>
-			<?php wp_reset_postdata(); ?>
-
 			<?php else : ?>
-				<p><?php esc_html_e( 'No post match your criteria.' ); ?></p>
+				<p><?php esc_html_e( 'No posts' ); ?></p>
 			<?php endif; ?>
 			</div>
-		</div>
 	</div>
 </section>

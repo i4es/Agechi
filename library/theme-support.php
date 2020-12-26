@@ -87,7 +87,7 @@ function jobs_custom_init(){
 			'not_found'          => 'Jobs now found',
 			'not_found_in_trash' => 'No jobs in trash',
 			'parent_item_colon'  => '',
-			'menu_name'          => 'Jobs'
+			'menu_name'          => 'Jobs',
 
 		),
 		'public'             => true,
@@ -98,8 +98,38 @@ function jobs_custom_init(){
 		'rewrite'            => true,
 		'capability_type'    => 'post',
 		'has_archive'        => true,
-		'hierarchical'       => false,
+		'hierarchical'       => true,
 		'menu_position'      => null,
-		'supports'           => array('title','editor','author','thumbnail','excerpt','comments')
+		'supports'           => array('title','editor','thumbnail'),
+		'show_in_rest'			 => true
 	) );
+}
+add_action( 'init', 'jobs_taxonomy' );
+function jobs_taxonomy(){
+
+	register_taxonomy( 'taxonomy', [ 'jobs' ], [
+		'label'                 => '',
+		'labels'                => [
+			'name'              => 'Jobs category',
+			'singular_name'     => 'Category',
+			'search_items'      => 'Search jobs category',
+			'all_items'         => 'All categories',
+			'view_item '        => 'View category',
+			'parent_item'       => 'Parent Category',
+			'parent_item_colon' => 'Parent Category:',
+			'edit_item'         => 'Edit Category',
+			'update_item'       => 'Update Category',
+			'add_new_item'      => 'Add New Category',
+			'new_item_name'     => 'New Category Name',
+			'menu_name'         => 'Category',
+		],
+		'description'           => '',
+		'public'                => true,
+		'hierarchical'          => true,
+		'rewrite'               => true,
+		'show_ui'								=> true,
+		'show_admin_column'     => false,
+		'show_in_rest'          => true,
+		'show_in_naw_menu'			=> true,
+	] );
 }

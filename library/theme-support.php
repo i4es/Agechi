@@ -107,7 +107,7 @@ function jobs_custom_init(){
 add_action( 'init', 'jobs_taxonomy' );
 function jobs_taxonomy(){
 
-	register_taxonomy( 'taxonomy', [ 'jobs' ], [
+	register_taxonomy( 'jobs_category', array('jobs'), [
 		'label'                 => '',
 		'labels'                => [
 			'name'              => 'Jobs category',

@@ -15,4 +15,6 @@ $('.ag-jobs-list').slick({
   infinite: true,
   slidesToShow: 3,
   slidesToScroll: 1,
+  nextArrow: '<button class="ag-jobs-list__prev">&#8592</button>',
+  prevArrow: '<button class="ag-jobs-list__next">&#8594</button>',
 });

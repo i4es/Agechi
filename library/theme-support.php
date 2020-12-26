@@ -70,3 +70,36 @@ function show_custom_logo( $size = 'medium' ) {
 	$html       = sprintf( '<a href="%1$s" class="custom-logo-link" rel="home" title="%2$s" itemscope>%3$s</a>', esc_url( home_url( '/' ) ), get_bloginfo( 'name' ), $logo_image );
 	echo apply_filters( 'get_custom_logo', $html );
 }
+
+// CUSTOM POST TYPE JOBS
+add_action('init', 'jobs_custom_init');
+function jobs_custom_init(){
+	register_post_type('jobs', array(
+		'labels'             => array(
+			'name'               => 'Jobs', // Основное название типа записи
+			'singular_name'      => 'Job', // отдельное название записи типа Book
+			'add_new'            => 'Add new',
+			'add_new_item'       => 'Add new job',
+			'edit_item'          => 'Edit job',
+			'new_item'           => 'New Job',
+			'view_item'          => 'View job',
+			'search_items'       => 'Search job',
+			'not_found'          => 'Jobs now found',
+			'not_found_in_trash' => 'No jobs in trash',
+			'parent_item_colon'  => '',
+			'menu_name'          => 'Jobs'
+
+		),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => true,
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array('title','editor','author','thumbnail','excerpt','comments')
+	) );
+}

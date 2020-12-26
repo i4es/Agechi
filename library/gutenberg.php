@@ -57,5 +57,15 @@ function register_acf_block_types(){
 		'render_template'   => 'template-parts/blocks/section-about.php',
 		'category'          => 'formatting',
 		'keywords'					=> array('acf', 'about'),
+		'enqueue_style' => get_template_directory_uri() . '/dist/assets/css/app.css'
+	));
+
+	acf_register_block_type(array(
+		'name'              => 'jobs',
+		'title'             => __('Jobs'),
+		'description'       => __('Custom jobs block.'),
+		'render_template'   => 'template-parts/blocks/section-jobs.php',
+		'category'          => 'formatting',
+		'keywords'					=> array('acf', 'jobs'),
 	));
 }

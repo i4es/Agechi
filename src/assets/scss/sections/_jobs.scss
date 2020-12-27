@@ -1,0 +1,141 @@
+.ag-jobs {
+  display: flex;
+  align-items: center;
+  background-image: url(../images/circle-line-bg-jobs.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &__title {
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 36px;
+    color: #36299a;
+  }
+}
+
+.ag-jobs-list {
+  padding-top: 105px;
+
+  &__next,
+  &__prev {
+    position: absolute;
+  }
+
+  &__next {
+    top: 0;
+    right: 0;
+  }
+
+  &__prev {
+    top: 0;
+    right: 20px;
+  }
+
+  &__item {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h4 {
+      font-family: "Poppins";
+      font-weight: 600;
+      color: #36299a;
+      line-height: 28px;
+      margin-top: 15px;
+    }
+    span {
+      font-family: "Poppins";
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 18px;
+      color: #f88341;
+      text-transform: uppercase;
+      margin-top: 35px;
+    }
+  }
+}
+
+// Full info item
+.ag-jobs-full-info-item {
+  padding-top: 150px;
+
+  &__taxname {
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #f88341;
+  }
+
+  &__title {
+    font-family: "Poppins";
+    font-weight: 600;
+    color: #36299a;
+  }
+
+  &__date {
+    display: flex;
+  }
+
+  &__date-start {
+    padding-right: 120px;
+  }
+
+  &__date-start,
+  &__date-end,
+  &__location,
+  &__services {
+    font-family: "Poppins";
+    span  {
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 15px;
+      font-weight: 400;
+      color: #898989;
+    }
+  }
+
+  &__description {
+    p {
+      font-family: "Poppins";
+      font-weight: 400;
+      color: #898989;
+    }
+  }
+}
+.fancybox-navigation {
+  width: 120px;
+  height: 50px;
+  position: absolute;
+  right: 60px;
+  bottom: 115px;
+}
+
+.fancybox-navigation .fancybox-button--arrow_right,
+.fancybox-navigation .fancybox-button--arrow_left{
+  padding: 0;
+  background: transparent;
+  width: 55px;
+  transition: .3s ease-in;
+  transition-property: color;
+  height: 60px;
+}
+
+.fancybox-button[disabled]:hover,
+.fancybox-button:hover{
+  color: #f88341;
+}
+
+.fancybox-slide--html .fancybox-close-small {
+  right: 75px;
+  top: 60px;
+  border: 1px solid #898989;
+  border-radius: 15px;
+}
+
+

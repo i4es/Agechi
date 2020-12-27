@@ -6,6 +6,7 @@
 @import 'motion-ui';
 @import '../../../node_modules/slick-carousel/slick/slick.css';
 @import '../../../node_modules/slick-carousel/slick/slick-theme.css';
+@import '../../../node_modules/@fancyapps/fancybox/src/css/core.css';
 
 @include foundation-global-styles;
 //@include foundation-grid;
@@ -91,3 +92,7 @@
 // Sections
 @import "sections/intro";
 @import "sections/about";
+@import "sections/jobs";
+
+// Blocks
+@import "blocks/block-jobs";

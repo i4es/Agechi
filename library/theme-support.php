@@ -100,8 +100,7 @@ function jobs_custom_init(){
 		'has_archive'        => true,
 		'hierarchical'       => true,
 		'menu_position'      => null,
-		'supports'           => array('title','editor','thumbnail'),
-		'show_in_rest'			 => true
+		'supports'           => array('title','thumbnail'),
 	) );
 }
 add_action( 'init', 'jobs_taxonomy' );
@@ -129,7 +128,6 @@ function jobs_taxonomy(){
 		'rewrite'               => true,
 		'show_ui'								=> true,
 		'show_admin_column'     => false,
-		'show_in_rest'          => true,
 		'show_in_naw_menu'			=> true,
 	] );
 }

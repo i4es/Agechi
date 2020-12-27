@@ -13,6 +13,11 @@
 
 .ag-logo {
   position: relative;
+  z-index: 2;
+
+  a {
+    outline: none;
+  }
 
   &__circle {
     width: 32px;

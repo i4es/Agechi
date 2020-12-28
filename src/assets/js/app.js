@@ -12,11 +12,23 @@ import '@fancyapps/fancybox';
 
 $(document).foundation();
 
-$('.ag-jobs-list').slick({
-  infinite: true,
-  centerMode: true,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  nextArrow: '<button class="ag-jobs-list__prev">&#8592</button>',
-  prevArrow: '<button class="ag-jobs-list__next">&#8594</button>',
+$(document).ready(function() {
+  $('.ag-jobs-list').slick({
+    infinite: true,
+    centerMode: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    nextArrow: '<button class="ag-jobs-list__prev"><i class="fas fa-long-arrow-alt-left"></i></button>',
+    prevArrow: '<button class="ag-jobs-list__next"><i class="fas fa-long-arrow-alt-right"></i></button>',
+  });
+
+  $('.ag-team-list').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode: true,
+    nextArrow: '<button class="ag-team-list__prev"><i class="fas fa-long-arrow-alt-left"></i></button>',
+    prevArrow: '<button class="ag-team-list__next"><i class="fas fa-long-arrow-alt-right"></i></button>',
+  });
 });
+

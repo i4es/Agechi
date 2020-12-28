@@ -10,6 +10,7 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php the_content(); ?>
 				<?php get_template_part('template-parts/sections/section', 'jobs') ?>
+				<?php get_template_part('template-parts/sections/section', 'team') ?>
 			<?php endwhile; ?>
 		<?php endif; ?>
 	</main>

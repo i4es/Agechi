@@ -53,6 +53,13 @@ if ( ! function_exists( 'foundationpress_theme_support' ) ) :
 	add_action( 'after_setup_theme', 'foundationpress_theme_support' );
 endif;
 
+// OPTIONS PAGE
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page();
+
+}
+
 // CUSTOM LOGO
 add_theme_support( 'custom-logo', array(
 	'height'      => '150',
@@ -103,6 +110,39 @@ function jobs_custom_init(){
 		'supports'           => array('title','thumbnail'),
 	) );
 }
+add_action('init', 'team_custom_init');
+function team_custom_init(){
+	register_post_type('team', array(
+		'labels'             => array(
+			'name'               => 'Team', // Основное название типа записи
+			'singular_name'      => 'Team member', // отдельное название записи типа Book
+			'add_new'            => 'Add new',
+			'add_new_item'       => 'Add new member',
+			'edit_item'          => 'Edit member',
+			'new_item'           => 'New member',
+			'view_item'          => 'View member',
+			'search_items'       => 'Search job',
+			'not_found'          => 'Members now found',
+			'not_found_in_trash' => 'No members in trash',
+			'parent_item_colon'  => '',
+			'menu_name'          => 'Team',
+
+		),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => true,
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => true,
+		'menu_position'      => null,
+		'supports'           => array('title','thumbnail','editor'),
+	) );
+}
+
+// CUSTOM POST TYPE TAXONOMY
 add_action( 'init', 'jobs_taxonomy' );
 function jobs_taxonomy(){
 
@@ -112,6 +152,35 @@ function jobs_taxonomy(){
 			'name'              => 'Jobs category',
 			'singular_name'     => 'Category',
 			'search_items'      => 'Search jobs category',
+			'all_items'         => 'All categories',
+			'view_item '        => 'View category',
+			'parent_item'       => 'Parent Category',
+			'parent_item_colon' => 'Parent Category:',
+			'edit_item'         => 'Edit Category',
+			'update_item'       => 'Update Category',
+			'add_new_item'      => 'Add New Category',
+			'new_item_name'     => 'New Category Name',
+			'menu_name'         => 'Category',
+		],
+		'description'           => '',
+		'public'                => true,
+		'hierarchical'          => true,
+		'rewrite'               => true,
+		'show_ui'								=> true,
+		'show_admin_column'     => false,
+		'show_in_naw_menu'			=> true,
+	] );
+}
+
+add_action( 'init', 'team_taxonomy' );
+function team_taxonomy(){
+
+	register_taxonomy( 'team_category', array('team'), [
+		'label'                 => '',
+		'labels'                => [
+			'name'              => 'Team category',
+			'singular_name'     => 'Category',
+			'search_items'      => 'Search team category',
 			'all_items'         => 'All categories',
 			'view_item '        => 'View category',
 			'parent_item'       => 'Parent Category',

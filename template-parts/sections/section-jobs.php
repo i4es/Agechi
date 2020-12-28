@@ -22,14 +22,14 @@
 					}
 					?>
 
-					<div class="ag-jobs-list__item cell small-12.medium-4 large-4" id="post-<?php the_id();?>">
+					<div class="ag-jobs-list__item" id="post-<?php the_id();?>">
 						<?php the_post_thumbnail();?>
 						<span><?php echo $tax_name ?></span>
 						<h4><?php the_title(); ?></h4>
 
-						<a class="ag-full-job-link" data-fancybox data-src="#jobs-info-<?php the_id();?>" href="javascript:;">
-							+
-						</a>
+						<div class="ag-full-job-link">
+							<a  data-fancybox data-src="#jobs-info-<?php the_id();?>" href="javascript:;">+</a>
+						</div>
 
 						<div  data-fancybox="gallery"  id="jobs-info-<?php the_id();?>" style="display: none;">
 							<div class="grid-container">

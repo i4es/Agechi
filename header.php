@@ -51,7 +51,9 @@
 				</nav>
 
 				<div class="site-in-touch">
-					<a class="site-in-touch__link" href="#">Get in touch</a>
+					<a class="site-in-touch__link" data-fancybox data-src="#ag-get-in-touch" href="javascript:;">
+						Get in touch
+					</a>
 				</div>
 			</div>
 

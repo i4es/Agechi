@@ -31,7 +31,8 @@
 							<a  data-fancybox data-src="#jobs-info-<?php the_id();?>" href="javascript:;">+</a>
 						</div>
 
-						<div  data-fancybox="gallery"  id="jobs-info-<?php the_id();?>" style="display: none;">
+						<div class="ag-popup-jobs"  data-fancybox="gallery"  id="jobs-info-<?php the_id();?>" style="display:
+						none;">
 							<div class="grid-container">
 								<div class="ag-logo">
 									<div class="ag-logo__circle"></div>

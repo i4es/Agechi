@@ -17,7 +17,7 @@ $solutionsTitle = get_field('solutions_title');
 
 ?>
 
-<section class="<?php echo esc_attr($className); ?>">
+<section class="<?php echo esc_attr($className); ?> mainview" vs-anchor="about" data-section-name="Home">
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
 			<div class="cell small-12 medium-2 large-2">

@@ -1,4 +1,4 @@
-<section class="ag-team-section">
+<section class="ag-team-section mainview" data-section-name="Teams" vs-anchor="teams">
 	<div class="grid-container">
 		<h2 class="ag-team-section__title">Excellent teams</h2>
 

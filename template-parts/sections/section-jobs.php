@@ -1,4 +1,4 @@
-<section class="ag-jobs">
+<section class="ag-jobs mainview" vs-anchor="jobs" data-section-name="Jobs">
 	<div class="grid-container">
 		<h2 class="ag-jobs__title">The best jobs</h2>
 			<?php
@@ -22,7 +22,7 @@
 					}
 					?>
 
-					<div class="ag-jobs-list__item" id="post-<?php the_id();?>">
+					<div class="ag-jobs-list__item" id="post-<?php the_id();?> ">
 						<?php the_post_thumbnail();?>
 						<span><?php echo $tax_name ?></span>
 						<h4><?php the_title(); ?></h4>

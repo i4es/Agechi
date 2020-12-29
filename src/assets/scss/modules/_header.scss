@@ -46,7 +46,8 @@
   li {
     a {
       color: #000;
-      &:hover {
+      &:hover,
+      &:active {
         transition: .3s ease-in;
         color: #f88341;
       }
@@ -58,6 +59,11 @@
       color: #f88341;
     }
   }
+}
+
+.dropdown.menu li a.active {
+  transition: .3s ease-in;
+  color: #f88341;
 }
 
 .ag-header {
@@ -83,5 +89,10 @@
     border: 1px solid #d7d7d7;
     border-radius: 20px;
     line-height: 55px;
+    color: #36299a;
+    &:hover {
+      color: #36299a;
+      text-decoration: underline;
+    }
   }
 }

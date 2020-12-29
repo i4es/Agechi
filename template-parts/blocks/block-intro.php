@@ -11,7 +11,7 @@ if (!empty($block['align'])) {
 
 ?>
 
-<section class="<?php echo esc_attr($className); ?>">
+<section class="<?php echo esc_attr($className); ?> mainview" vs-anchor="home" data-section-name="Home">
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
 			<div class="ag-intro__content">

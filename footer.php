@@ -33,9 +33,17 @@
 					<p><?php echo $footerCopy ?></p>
 				</div>
 			</div>
-			<div class="cell small-12 medium-6 large-6">
 
-			</div>
+			<div class="cell small-12 medium-6 large-6">
+				<div class="ag-section-counter">
+					<img class="ag-section-counter__mouse" src="<?php bloginfo('template_url'); ?>/src/assets/images/mouse.png"
+							 alt="Mouse">
+					<div class="ag-section-counter__inner">
+						<div class="ag-section-counter__number"></div>
+						<span></span>
+						<h3 class="ag-section-counter__title"></h3>
+					</div>
+				</div>
 		</div>
 	</div>
 </footer>

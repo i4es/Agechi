@@ -25,7 +25,7 @@ get_header(); ?>
 				<div class="ag-popup-get-in-touch__inner">
 					<div class="grid-x grid-margin-x">
 
-						<div class="cell small-12 medium-4 large-offset-2 large-4">
+						<div class="cell small-12 medium-6 large-offset-2 large-4">
 							<div class="ag-popup-get-in-touch-left-content">
 								<?php if( get_field('contact_info_title', 'option') ): ?>
 									<h2 class="ag-popup-get-in-touch-left-content__title"><?php the_field('contact_info_title', 'option'); ?></h2>

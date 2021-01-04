@@ -1,6 +1,10 @@
 <section class="ag-jobs mainview" vs-anchor="jobs" data-section-name="Jobs">
 	<div class="grid-container">
-		<h2 class="ag-jobs__title">The best jobs</h2>
+		<div class="cell small-12">
+			<h2 class="ag-jobs__title">The best jobs</h2>
+		</div>
+	</div>
+	<div class="grid-container">
 			<?php
 			$args = array(
 				'post_type' => 'jobs'
@@ -40,15 +44,17 @@
 								</div>
 								<div class="ag-jobs-full-info-item" id="post-<?php the_id();?>">
 									<div class="grid-x grid-margin-x">
-										<div class="cell small-12 medium-8 large-8">
+										<div class="cell small-12 medium-6 large-8">
 											<?php
 											$image = get_field('job_image');
 											if( !empty( $image ) ): ?>
-												<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+												<img class="ag-jobs-full-info-item__img" src="<?php echo esc_url($image['url']); ?>" alt="<?php
+												echo esc_attr
+												($image['alt']); ?>" />
 											<?php endif; ?>
 										</div>
 
-										<div class="cell small-12 medium-4 large-4">
+										<div class="cell small-12 medium-6 large-4">
 
 											<span class="ag-jobs-full-info-item__taxname"><?php echo $tax_name ?></span>
 

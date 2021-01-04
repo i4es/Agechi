@@ -9,6 +9,11 @@
 ?>
 
 <nav class="mobile-off-canvas-menu off-canvas position-left" id="<?php foundationpress_mobile_menu_id(); ?>" data-off-canvas data-auto-focus="false" role="navigation">
+	<div class="ag-mobile-logo">
+		<div class="ag-mobile-logo__circle"></div>
+		<?php show_custom_logo(); ?>
+	</div>
+
 	<?php foundationpress_mobile_nav(); ?>
 </nav>
 

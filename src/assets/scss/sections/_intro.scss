@@ -38,9 +38,10 @@
         font-size: 90px;
       }
 
-      @include breakpoint(small down) {
-        font-size: 85px;
-        line-height: 85px;
+      @include breakpoint(small only) {
+        font-size: 42px;
+        line-height: 42px;
+        margin-bottom: 35px;
       }
     }
 
@@ -85,6 +86,10 @@
       max-width: 35%;
     }
 
+    @include breakpoint(small only) {
+      top: 34vh;
+    }
+
   }
 
   &__img-orange {
@@ -98,6 +103,10 @@
 
     @include breakpoint(xlarge down) {
       max-width: 15%;
+    }
+
+    @include breakpoint(small only) {
+      right: 25vw;
     }
   }
 
@@ -113,6 +122,11 @@
     @include breakpoint(xlarge down) {
       max-width: 6%;
     }
+
+    @include breakpoint(small only) {
+      bottom: 4vh;
+      right: 23vw;
+    }
   }
 
   &__img-red-circle-blur {
@@ -123,6 +137,10 @@
     @include breakpoint(xlarge down) {
       max-width: 10%;
       top: 30vh;
+    }
+
+    @include breakpoint(small only) {
+      top: 20vh;
     }
   }
 
@@ -145,6 +163,11 @@
 
     @include breakpoint(large down) {
       bottom: 40vh;
+    }
+
+    @include breakpoint(small only) {
+      bottom: 55vh;
+      left: 15vw;
     }
   }
 }

@@ -27,9 +27,9 @@ $(document).ready(function() {
     prevArrow: '<button class="ag-jobs-list__next"><i class="fas fa-long-arrow-alt-right"></i></button>',
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1520,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
           centerMode: true,
         }
@@ -37,8 +37,8 @@ $(document).ready(function() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           centerMode: true,
         }
       },
@@ -60,6 +60,32 @@ $(document).ready(function() {
     centerMode: true,
     nextArrow: '<button class="ag-team-list__prev"><i class="fas fa-long-arrow-alt-left"></i></button>',
     prevArrow: '<button class="ag-team-list__next"><i class="fas fa-long-arrow-alt-right"></i></button>',
+    responsive: [
+      {
+        breakpoint: 1520,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+        }
+      }
+    ]
   });
 });
 

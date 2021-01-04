@@ -1,4 +1,9 @@
 .site-in-touch {
+
+  @include breakpoint(1780 down) {
+    padding-right: 15px;
+  }
+
   &__link {
     font-family: "Poppins";
     font-weight: 600;
@@ -30,39 +35,67 @@
   background-color: #fcf2f0;
   overflow: hidden;
 
+  @include breakpoint(small down) {
+    padding: 20px 0;
+  }
+
   &__inner {
     margin-top: 220px;
 
+    @include breakpoint(small down) {
+      margin-top: 30px;
+    }
   }
 
   &__img-red-circle-blur {
     position: absolute;
     top: -50px;
     left: 25vw;
+
+    @include breakpoint(small down) {
+      display: none;
+    }
   }
 
   &__img-yellow-circle-blur {
     position: absolute;
     left: 8vw;
     bottom: -70px;
+
+    @include breakpoint(small down) {
+      display: none;
+    }
   }
 
   &__img-red-circle {
     position: absolute;
     left: 16.5vw;
     bottom: 98px;
+
+    @include breakpoint(small down) {
+      display: none;
+    }
   }
 
   &__green {
     position: absolute;
     right: -5px;
     top: 37vh;
+
+    @include breakpoint(large down) {
+      display: none;
+    }
   }
 
   &__green-blur {
     position: absolute;
     right: -5px;
     top: 40vh;
+
+    @include breakpoint(large down) {
+      display: none;
+    }
+
   }
 }
 
@@ -76,6 +109,10 @@
     font-size: 36px;
     color: #36299a;
     margin-bottom: 25px;
+
+    @include breakpoint(small down) {
+      font-size: 23px;
+    }
   }
 
   &__addr {
@@ -83,6 +120,10 @@
     font-weight: 600;
     font-size: 16px;
     margin: 25px 0 5px 0;
+
+    @include breakpoint(small down) {
+      display: none;
+    }
   }
 
   &__phone {
@@ -91,6 +132,10 @@
     font-size: 16px;
     color: #000;
     margin: 5px 0 10px 0;
+
+    @include breakpoint(small down) {
+      display: none;
+    }
   }
 
   &__mail {
@@ -99,6 +144,11 @@
     font-size: 24px;
     color: #f88341;
     margin: 10px 0 30px 0;
+
+    @include breakpoint(small down) {
+      display: none;
+    }
+
     &:hover {
       text-decoration: underline;
       cursor: pointer;
@@ -107,10 +157,13 @@
 
   &__social-list {
     list-style-type: none;
-    margin: 0;
     padding: 0;
     display: flex;
-    margin-top: 30px;
+    margin: 30px 0 0 0;
+
+    @include breakpoint(340 down) {
+      display: none;
+    }
 
     li {
       font-size: 16px;
@@ -144,6 +197,10 @@
     font-size: 36px;
     color: #36299a;
     margin-bottom: 40px;
+
+    @include breakpoint(small down) {
+      display: none;
+    }
   }
 
   &__fields {
@@ -192,6 +249,11 @@
       cursor: pointer;
       background-color: #fcf2f0;
       color: #f88341;
+    }
+
+    @include breakpoint(small down) {
+      display: flex;
+      margin: 0 auto;
     }
   }
 }

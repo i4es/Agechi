@@ -35,6 +35,27 @@
   }
 }
 
+.ag-mobile-logo {
+  position: relative;
+  z-index: 2;
+  margin: 30px 0 30px 0;
+  padding-left: 15px;
+
+  a {
+    outline: none;
+  }
+
+  &__circle {
+    width: 32px;
+    height: 32px;
+    @include accentColor;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    bottom: 8px;
+  }
+}
+
 .top-bar {
   padding: 0;
   background-color: transparent;
@@ -77,6 +98,14 @@
   width: 100%;
   z-index: 12;
 
+  @include breakpoint(large down) {
+    top: 15px;
+  }
+
+  @include breakpoint(small only) {
+    top: 5px;
+  }
+
   &__inner {
     width: 100%;
     display: flex;
@@ -84,3 +113,31 @@
   }
 
 }
+
+.title-bar {
+  background-color: transparent;
+  color: #f88341;
+}
+
+.menu-icon::after {
+  background: #f88341;
+  box-shadow: 0 7px 0 #f88341, 0 14px 0 #f88341;
+}
+
+.off-canvas {
+  background: #fcf2f0;
+}
+
+.vertical {
+  li {
+    a {
+      color: #000;
+      &:hover {
+        color: #f88341;
+      }
+    }
+  }
+}
+
+
+

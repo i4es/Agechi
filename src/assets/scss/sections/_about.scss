@@ -7,6 +7,14 @@
     padding: 200px 0;
   }
 
+  @include breakpoint(large down) {
+    padding: 150px 0;
+  }
+
+  @include breakpoint(small only) {
+    padding: 75px 0;
+  }
+
   &__title {
     h3 {
       font-family: "Poppins";
@@ -16,6 +24,10 @@
 
     @include breakpoint(large down) {
       margin-bottom: 50px;
+    }
+
+    @include breakpoint(small only) {
+      margin-bottom: 15px;
     }
   }
 
@@ -28,6 +40,9 @@
 
     @include breakpoint(xxlarge down) {
       font-size: 40px;
+    }
+    @include breakpoint(small down) {
+      max-width: 100%;
     }
 
     h2 {
@@ -43,6 +58,11 @@
         font-size: 35px;
       }
 
+      @include breakpoint(small only) {
+        font-size: 25px;
+        line-height: 30px;
+      }
+
     }
 
     p {
@@ -51,6 +71,12 @@
       color: #898989;
       font-size: 15px;
       margin: 40px 0 40px 0;
+
+      @include breakpoint(340 down) {
+        &:last-child {
+          display: none;
+        }
+      }
     }
   }
 
@@ -60,6 +86,16 @@
 
     @include breakpoint(large down) {
       margin-top: 50px;
+    }
+
+    @include breakpoint(small down) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include breakpoint(340 down) {
+      display: none;
     }
 
     span {
@@ -77,6 +113,10 @@
       margin: 0 0 0 30px;
       padding: 0;
       align-items: center;
+
+      @include breakpoint(small only) {
+        margin: 0;
+      }
 
       li {
         margin-left: 30px;
@@ -116,7 +156,7 @@
     padding: 0;
     list-style-type: none;
 
-    @include breakpoint(xxlarge down) {
+    @include breakpoint(medium down) {
       display: flex;
       justify-content: space-around;
     }

@@ -124,6 +124,12 @@
       display: block;
       margin: 0 auto 50px auto;
     }
+
+    @include breakpoint(450 down) {
+      max-width: 50%;
+      display: block;
+      margin: 0 auto 50px auto;
+    }
   }
 
   &__taxname {
@@ -139,6 +145,10 @@
     font-family: "Poppins";
     font-weight: 600;
     color: #36299a;
+
+    @include breakpoint(450 down) {
+      font-size: 25px;
+    }
   }
 
   &__date {

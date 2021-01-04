@@ -43,6 +43,12 @@
         font-size: 90px;
         margin-bottom: 35px;
       }
+
+      @include breakpoint(450 down) {
+        font-size: 39px;
+        line-height: 45px;
+        margin-bottom: 35px;
+      }
     }
 
     p {

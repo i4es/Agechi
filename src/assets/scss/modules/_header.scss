@@ -173,6 +173,19 @@
   @include breakpoint(xxlarge down) {
     top: 30px;
   }
+
+  @include breakpoint(xlarge down) {
+    left: 75%;
+  }
+
+  @include breakpoint(large down) {
+    left: 70%;
+  }
+
+  @include breakpoint(500 down) {
+    top: 20px;
+    left: 42%;
+  }
 }
 
 

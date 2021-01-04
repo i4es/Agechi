@@ -27,10 +27,15 @@
 
   @include breakpoint(small only) {
     margin-top: 50px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  @include breakpoint(375 down) {
+    margin-top: 100px;
   }
 
   @include breakpoint(340 down) {
-    margin-top: 0;
+    margin-top: 30px;
   }
 
   &__item {
@@ -59,11 +64,17 @@
   &__next {
     top: -35px;
     right: 0;
+    @include breakpoint(small only) {
+      right: 15px;
+    }
   }
 
   &__prev {
     top: -35px;
     right: 40px;
+    @include breakpoint(small only) {
+      right: 55px;
+    }
   }
 
   &__item {

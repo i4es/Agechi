@@ -12,7 +12,7 @@
 <footer class="ag-footer">
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
-			<div class="cell small-12 medium-6 large-6">
+			<div class="cell small-8 medium-6 large-6">
 				<div class="ag-footer-contacts">
 					<?php
 					$footerEmail = get_field('footer_email','options');
@@ -20,7 +20,10 @@
 					?>
 
 					<div class="ag-footer-contacts__form">
-						<a href="#"></a>
+						<?php if( get_field('footer_email_icon', 'option') ): ?>
+							<a href="mailto:<?php echo $footerEmail?>"><?php the_field('footer_email_icon', 'option'); ?></a>
+						<?php endif; ?>
+
 					</div>
 
 					<div class="ag-footer-contacts__email">
@@ -34,7 +37,7 @@
 				</div>
 			</div>
 
-			<div class="cell small-12 medium-6 large-6">
+			<div class="cell small-4 medium-6 large-6">
 				<div class="ag-section-counter">
 					<img class="ag-section-counter__mouse" src="<?php bloginfo('template_url'); ?>/src/assets/images/mouse.png"
 							 alt="Mouse">

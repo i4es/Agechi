@@ -20,13 +20,13 @@ $solutionsTitle = get_field('solutions_title');
 <section class="<?php echo esc_attr($className); ?> mainview" vs-anchor="about" data-section-name="Home">
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
-			<div class="cell small-12 medium-2 large-2">
+			<div class="cell small-12 medium-12 large-2">
 				<div class="ag-about__title">
 					<h3><?php echo $aboutBlockTitle ?></h3>
 				</div>
 			</div>
 
-			<div class="cell small-12 medium-5 large-5">
+			<div class="cell small-12 medium-12 large-5">
 				<div class="ag-about__content">
 					<h2><?php echo $aboutSectionTitle ?></h2>
 
@@ -36,15 +36,12 @@ $solutionsTitle = get_field('solutions_title');
 						<span><?php echo $aboutPartnerTitle ?></span>
 
 						<?php if( have_rows('partners') ): ?>
-							<ul>
-								<?php while( have_rows('partners') ) : the_row(); ?>
-									<?php $partnersIcon = get_sub_field('partners_icon'); ?>
-									<li>
-										<?php if ( !empty( $partnersIcon ) ): ?>
-											<img src="<?php echo esc_url($partnersIcon['url']); ?>" alt="<?php echo esc_attr($partnersIcon['alt']); ?>" />
-										<?php endif; ?>
+							<ul class="ag-about-partners-list">
+								<?php while( have_rows('partners') ): the_row(); ?>
+									<li class="ag-about-partners-list__item">
+										<?php the_sub_field('partners_icon'); ?>
 									</li>
-								<?php endwhile; ?>
+								<?php  endwhile; ?>
 							</ul>
 						<?php endif; ?>
 
@@ -52,7 +49,7 @@ $solutionsTitle = get_field('solutions_title');
 				</div>
 			</div>
 
-			<div class="cell small-12 medium-5 large-5">
+			<div class="cell small-12 medium-12 large-5 hide-for-small-only">
 				<div class="ag-about__solutions">
 					<h3><?php echo $solutionsTitle ?></h3>
 

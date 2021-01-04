@@ -25,6 +25,32 @@ $(document).ready(function() {
     slidesToScroll: 1,
     nextArrow: '<button class="ag-jobs-list__prev"><i class="fas fa-long-arrow-alt-left"></i></button>',
     prevArrow: '<button class="ag-jobs-list__next"><i class="fas fa-long-arrow-alt-right"></i></button>',
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          centerMode: true,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          centerMode: true,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+        }
+      }
+    ]
   });
 
   $('.ag-team-list').slick({

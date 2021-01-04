@@ -42,7 +42,9 @@
 					<img class="ag-section-counter__mouse" src="<?php bloginfo('template_url'); ?>/src/assets/images/mouse.png"
 							 alt="Mouse">
 					<div class="ag-section-counter__inner">
-						<div class="ag-section-counter__number"></div>
+						<div class="ag-section-counter__number">
+							01
+						</div>
 						<span></span>
 						<h3 class="ag-section-counter__title"></h3>
 					</div>

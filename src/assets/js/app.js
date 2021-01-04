@@ -27,7 +27,7 @@ $(document).ready(function() {
     prevArrow: '<button class="ag-jobs-list__next"><i class="fas fa-long-arrow-alt-right"></i></button>',
     responsive: [
       {
-        breakpoint: 1520,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -62,7 +62,7 @@ $(document).ready(function() {
     prevArrow: '<button class="ag-team-list__next"><i class="fas fa-long-arrow-alt-right"></i></button>',
     responsive: [
       {
-        breakpoint: 1520,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -100,7 +100,8 @@ $(window).ready(function () {
   }
 
   const checkActive = function () {
-    const link = window.location.href.split('#').pop();
+    let link = window.location.hash.split('#').pop();
+    link = link == '' ? 'Home' : link;
     const sectionName = capitalizeFirstLetter(link);
 
     $('.top-bar-right ul li a').each(

@@ -50,8 +50,9 @@
       font-weight: 700;
       line-height: 60px;
 
-      @include breakpoint(xlarge down) {
-        font-size: 40px;
+      @include breakpoint(xxlarge down) {
+        font-size: 32px;
+        line-height: 32px;
       }
 
       @include breakpoint(large down) {
@@ -84,7 +85,7 @@
     display: flex;
     margin-top: 120px;
 
-    @include breakpoint(large down) {
+    @include breakpoint(xxlarge down) {
       margin-top: 50px;
     }
 
@@ -94,7 +95,7 @@
       align-items: center;
     }
 
-    @include breakpoint(340 down) {
+    @include breakpoint(375 down) {
       display: none;
     }
 
@@ -179,7 +180,7 @@
     right: 20vw;
     top: -5vh;
 
-    @include breakpoint(xlarge down) {
+    @include breakpoint(xxlarge down) {
       max-width: 10%;
     }
   }
@@ -189,7 +190,7 @@
     right: 1vw;
     bottom: 0;
 
-    @include breakpoint(xlarge down) {
+    @include breakpoint(xxlarge down) {
       max-width: 30%;
     }
 
@@ -202,10 +203,9 @@
     position: absolute;
     left: 20vw;
     bottom: -12vh;
-    width: 240px;
 
-    @include breakpoint(xlarge down) {
-      max-width: 20%;
+    @include breakpoint(xxlarge down) {
+      max-width: 12%;
     }
   }
 
@@ -214,9 +214,9 @@
     bottom: 0;
     left: 27vw;
 
-    @include breakpoint(large down) {
+    @include breakpoint(xxlarge down) {
+      left: 28vw;
       max-width: 5%;
-      left: 33vw;
     }
 
   }

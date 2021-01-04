@@ -98,6 +98,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    img {
+      @include breakpoint(xxlarge down) {
+        max-width: 50%;
+      }
+    }
   }
 
   &__hidden-content {
@@ -111,7 +117,7 @@
       font-weight: 400;
       color: #898989;
 
-      @include breakpoint(340 down) {
+      @include breakpoint(375 down) {
         display: none;
       }
     }

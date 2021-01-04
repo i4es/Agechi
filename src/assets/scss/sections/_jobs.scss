@@ -26,21 +26,16 @@
 .ag-jobs-list {
 
   @include breakpoint(xlarge down) {
-    margin-top: 100px;
+    margin-left: -20px;
+    margin-right: -20px;
   }
 
-  @include breakpoint(340 down) {
+  @include breakpoint(xxlarge down) {
+    margin-top: 0;
+  }
+
+  @include breakpoint(375 down) {
     margin-top: 30px;
-  }
-
-  &__item {
-    margin-top: 100px;
-
-    @include breakpoint(340 down) {
-      img {
-        max-width: 50%;
-      }
-    }
   }
 
   &__next,
@@ -65,11 +60,19 @@
   &__next {
     top: 0;
     right: 0;
+
+    @include breakpoint(xxlarge down) {
+      right: 15px;
+    }
   }
 
   &__prev {
     top: 0;
     right: 40px;
+
+    @include breakpoint(xxlarge down) {
+      right: 55px;
+    }
   }
 
   &__item {
@@ -78,6 +81,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-top: 100px;
 
     h4 {
       font-family: "Poppins";
@@ -95,6 +99,12 @@
       color: #f88341;
       text-transform: uppercase;
       margin-top: 35px;
+    }
+
+    img {
+      @include breakpoint(xxlarge down) {
+        max-width: 70%;
+      }
     }
   }
 }
